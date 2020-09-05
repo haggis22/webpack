@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title></title>
 </head>
-<body ng-app="PokerApp" ng-controller="PokerCtrl" ng-cloak>
+<body >
 
     <div class="dutch">
         <h1>Welkom bij onze site!</h1>
@@ -15,7 +15,12 @@
         <h1>Welcome to oor site!</h1>
     </div>
 
-    <h5>Hello, {{ name }}</h5>
+    <div id="poker">
+
+        <h5 :title="message">Hello, {{ name }}</h5>
+
+    </div>
+
 
 </body>
 </html>

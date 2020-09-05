@@ -29,13 +29,16 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="src\client\poker\app.js">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="src\client\poker\poker-controller.js">
+    <Compile Include="src\client\poker\poker.js">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\server\server.js" />
+    <Compile Include=".gitignore" />
+    <Content Include="babel.config.json" />
+    <Content Include="src\client\poker\style.scss">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="webpack.config.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="src\client\index.html">

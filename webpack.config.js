@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
 
-    entry: { index: path.resolve(__dirname, "src/client/poker", "app.js") },
+    entry: { index: path.resolve(__dirname, "src/client/poker", "poker.js") },
     output: { path: path.resolve(__dirname, "dist/poker") },
 
     module: {
@@ -28,6 +28,12 @@ module.exports = {
     plugins: [
 
         new HtmlWebpackPlugin({ template: path.resolve(__dirname, "src/client/poker", "index.html")})
-    ]
+    ],
+
+    resolve: {
+        alias: {
+            vue: 'vue/dist/vue.js'
+        }
+    }
 
 };
