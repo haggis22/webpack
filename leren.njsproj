@@ -29,13 +29,14 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="src\client\poker\poker.js">
+    <Compile Include="src\client\index.ts">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\server\server.js" />
     <Compile Include=".gitignore" />
     <Content Include="babel.config.json" />
-    <Content Include="src\client\poker\style.scss">
+    <Content Include="tsconfig.json" />
+    <Content Include="src\client\style.scss">
       <SubType>Code</SubType>
     </Content>
     <Content Include="webpack.config.js" />
@@ -44,15 +45,15 @@
     <Content Include="src\client\index.html">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\client\poker\index.html">
-      <SubType>Code</SubType>
-    </Content>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="dist\" />
     <Folder Include="src\" />
     <Folder Include="src\client\" />
-    <Folder Include="src\client\poker\" />
     <Folder Include="src\server\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="dist\index.ts" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
